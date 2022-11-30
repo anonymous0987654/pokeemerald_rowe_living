@@ -1,3 +1,9 @@
+## Pokemon R.O.W.E. (living dex edition)
+
+This is a fork of Pokemon R.O.W.E. that increases the PC space to 40 boxes so that you can store an entire "living Pokedex" plus some more. This exceeds the GBA RAM and Flash limit so this ROM can only run on a specially patched emulator.  
+Here's a fork of the mGBA emulator with the appropriate patches to run it: <https://github.com/anonymous0987654/mgba-expanded>  
+Savegames of vanilla R.O.W.E. are NOT compatible with this ROM, importing them will result in corrupted data!
+
 # Pokémon Emerald
 
 This is a decompilation of Pokémon Emerald.

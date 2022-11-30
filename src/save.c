@@ -71,6 +71,22 @@ static const struct SaveSectionOffsets sSaveSectionOffsets[] =
     SAVEBLOCK_CHUNK(gPokemonStorage, 6),
     SAVEBLOCK_CHUNK(gPokemonStorage, 7),
     SAVEBLOCK_CHUNK(gPokemonStorage, 8),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 9),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 10),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 11),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 12),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 13),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 14),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 15),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 16),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 17),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 18),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 19),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 20),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 21),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 22),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 23),
+    SAVEBLOCK_CHUNK(gPokemonStorage, 24),
 };
 
 // iwram common

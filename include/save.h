@@ -25,12 +25,12 @@ struct UnkSaveSection
 
 struct SaveSectionOffsets
 {
-    u16 toAdd;
+    u32 toAdd;
     u16 size;
 };
 
 // Emerald changes this definition to be the sectors per slot.
-#define NUM_SECTORS_PER_SLOT 14
+#define NUM_SECTORS_PER_SLOT 30 /* increased from 14 */
 
 #define UNKNOWN_CHECK_VALUE 0x8012025
 #define SPECIAL_SECTION_SENTINEL 0xB39D
@@ -59,14 +59,14 @@ enum
 #define SECTOR_ID_SAVEBLOCK1_START 1
 #define SECTOR_ID_SAVEBLOCK1_END   4
 #define SECTOR_ID_PKMN_STORAGE_START 5
-#define SECTOR_ID_PKMN_STORAGE_END   13
-#define SECTOR_SAVE_SLOT_LENGTH 14
-// Save Slot 1: 0-13;  Save Slot 2: 14-27
-#define SECTOR_ID_HOF_1 28
-#define SECTOR_ID_HOF_2 29
-#define SECTOR_ID_TRAINER_HILL 30
-#define SECTOR_ID_RECORDED_BATTLE  31
-#define SECTORS_COUNT 32
+#define SECTOR_ID_PKMN_STORAGE_END   29
+#define SECTOR_SAVE_SLOT_LENGTH 30
+// Save Slot 1: 0-29;  Save Slot 2: 30-59
+#define SECTOR_ID_HOF_1 60
+#define SECTOR_ID_HOF_2 61
+#define SECTOR_ID_TRAINER_HILL 62
+#define SECTOR_ID_RECORDED_BATTLE  63
+#define SECTORS_COUNT 64
 
 _Static_assert(SECTOR_SAVE_SLOT_LENGTH == NUM_SECTORS_PER_SLOT);
 

@@ -472,6 +472,10 @@ static u8 sub_8152E10(u16 a1, const struct SaveSectionLocation *location)
     return SAVE_STATUS_OK;
 }
 
+/* Beware of overflow if there are more than 31 sections per save in your hack.
+   You need to change the validation method if so. */
+#define ALL_SECTIONS_PRESENT_FLAGS ((1ull << SECTOR_SAVE_SLOT_LENGTH)-1)
+
 static u8 GetSaveValidStatus(const struct SaveSectionLocation *location)
 {
     u16 i;
@@ -501,7 +505,7 @@ static u8 GetSaveValidStatus(const struct SaveSectionLocation *location)
 
     if (securityPassed)
     {
-        if (slotCheckField == 0x3FFF)
+        if (slotCheckField == ALL_SECTIONS_PRESENT_FLAGS)
             saveSlot1Status = SAVE_STATUS_OK;
         else
             saveSlot1Status = SAVE_STATUS_ERROR;
@@ -532,7 +536,7 @@ static u8 GetSaveValidStatus(const struct SaveSectionLocation *location)
 
     if (securityPassed)
     {
-        if (slotCheckField == 0x3FFF)
+        if (slotCheckField == ALL_SECTIONS_PRESENT_FLAGS)
             saveSlot2Status = SAVE_STATUS_OK;
         else
             saveSlot2Status = SAVE_STATUS_ERROR;

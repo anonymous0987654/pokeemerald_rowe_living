@@ -30,7 +30,7 @@ struct SaveSectionOffsets
 };
 
 // Emerald changes this definition to be the sectors per slot.
-#define NUM_SECTORS_PER_SLOT 16
+#define NUM_SECTORS_PER_SLOT 14
 
 #define UNKNOWN_CHECK_VALUE 0x8012025
 #define SPECIAL_SECTION_SENTINEL 0xB39D
@@ -67,6 +67,8 @@ enum
 #define SECTOR_ID_TRAINER_HILL 30
 #define SECTOR_ID_RECORDED_BATTLE  31
 #define SECTORS_COUNT 32
+
+_Static_assert(SECTOR_SAVE_SLOT_LENGTH == NUM_SECTORS_PER_SLOT);
 
 #define SAVE_STATUS_EMPTY    0
 #define SAVE_STATUS_OK       1

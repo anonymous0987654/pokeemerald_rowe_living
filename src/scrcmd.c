@@ -23,7 +23,7 @@
 #include "field_weather.h"
 #include "fieldmap.h"
 #include "item.h"
-#include "level_scale.h"
+#include "level_scaling.h"
 #include "lilycove_lady.h"
 #include "main.h"
 #include "menu.h"
@@ -493,7 +493,7 @@ bool8 ScrCmd_additem(struct ScriptContext *ctx)
     u16 itemId = VarGet(ScriptReadHalfword(ctx));
     u32 quantity = VarGet(ScriptReadHalfword(ctx));
 
-    gSpecialVar_Result = AddBagItem(ItemId, (u8)quantity);
+    gSpecialVar_Result = AddBagItem(itemId, (u8)quantity);
     return FALSE;
 }
 
@@ -1692,7 +1692,7 @@ bool8 ScrCmd_givemon(struct ScriptContext *ctx)
     if(ability== 4)
 		gSpecialVar_Result = ScriptGiveMon(species, level, item, ability, unkParam2, unkParam3);
 	else
-		gSpecialVar_Result = ScriptGiveMon(Specie, level, item, ability, unkParam2, unkParam3);
+		gSpecialVar_Result = ScriptGiveMon(species, level, item, ability, unkParam2, unkParam3);
     return FALSE;
 }
 
@@ -2265,7 +2265,7 @@ bool8 ScrCmd_cmdD9(struct ScriptContext *ctx)
     }
 }
 
-// This command will force the Pokémon to be obedient, you don't get to make it disobedient.
+// This command will force the Pokemon to be obedient, you don't get to make it disobedient.
 bool8 ScrCmd_setmonobedient(struct ScriptContext *ctx)
 {
     bool8 obedient = TRUE;

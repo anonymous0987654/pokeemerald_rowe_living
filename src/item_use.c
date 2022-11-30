@@ -44,8 +44,10 @@
 #include "constants/item_effects.h"
 #include "constants/items.h"
 #include "constants/songs.h"
-#include "data/scripts/tv.inc"
+/* #include "data/scripts/tv.inc" */
 #include "soar.h"
+
+extern const u8 EventScript_Sinnoh_Sounds[];
 
 static void SetUpItemUseCallback(u8 taskId);
 static void FieldCB_UseItemOnField(void);

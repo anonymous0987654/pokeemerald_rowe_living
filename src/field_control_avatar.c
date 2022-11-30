@@ -37,7 +37,9 @@
 #include "constants/maps.h"
 #include "constants/songs.h"
 #include "constants/trainer_hill.h"
-#include "data/scripts/field_move_scripts.inc"
+/* #include "data/scripts/field_move_scripts.inc" */
+
+extern const u8 EventScript_CutTree[];
 
 static EWRAM_DATA u8 sWildEncounterImmunitySteps = 0;
 static EWRAM_DATA u16 sPreviousPlayerMetatileBehavior = 0;

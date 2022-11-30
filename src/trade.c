@@ -4826,7 +4826,7 @@ static void _CreateInGameWonderTradePokemon(u8 whichPlayerMon, u8 whichInGameTra
     CreateMon(pokemon, Specie, level, 32, FALSE, 0, OT_ID_PRESET, inGameTrade->otId, GetFormIdFromFormSpeciesId(inGameTrade->species));
 	WonderTradeCreateMoveset(FirstStage, SeenNum, level, PkmnMoves);
 	
-	for (n = 0; n <= 12; n++)
+	for (n = 0; n < 12; n++)
 		otName[n] = gTrainers[trainerNum].trainerName[n];
 
     SetMonData(pokemon, MON_DATA_HP_IV, &HpIv);

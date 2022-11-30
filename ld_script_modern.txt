@@ -11,12 +11,12 @@ SECTIONS {
     {
         gHeap = .;
 
-        . = 0x1C000;
+        . = 0x60000; /* increased from 0x1C000 */
 
         src/*.o(ewram_data);
         gflib/*.o(ewram_data);
 
-        . = 0x40000;
+        . = 0x100000; /* increased from 0x40000 */
 }
 
     . = 0x3000000;
